@@ -41,7 +41,7 @@ Dieses Projekt überbrückt die Lücke zwischen der FTP-Upload-Funktionalität v
    nano transfer.sh
    ```
 
-4. Fügen Sie den Inhalt des Scripts ein und konfigurieren Sie Ihre Einstellungen.
+4. Fügen Sie den Inhalt des Scripts ein und konfigurieren Sie Ihre Einstellungen (siehe unten).
 
 5. Machen Sie das Script ausführbar:
    ```bash
@@ -78,6 +78,18 @@ Bearbeiten Sie die folgenden Variablen in `transfer.sh`:
 - `TELEGRAM_CHAT_IDS` Telegram Chat ID
 - `UPTIME_KUMA_URL` Uptime Kuma Push URL
 - `TZ` Zeitzone
+
+## Automatische Ausführung
+Sie können das Script automatisch ausführen. Für eine Ausführung alle 5 Minuten verwenden Sie zum Beispiel folgenden Cron-Tab Eintrag.
+*Es empfielt sich, die selbe Zeit wie im Script zu nutzen*
+
+   ```bash
+   crontab -e
+   ```
+
+   ```bash
+   */5 * * * * /pfad/zum/script/transfer.sh
+   ```
 
 ## Vorsicht
 
